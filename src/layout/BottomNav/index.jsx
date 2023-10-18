@@ -60,7 +60,7 @@ export default function BottomNav() {
   return (
     <section
       id="bottom-navigation"
-      className="block fixed inset-x-0 bottom-0 z-10 "
+      className="block fixed inset-x-0 bottom-0 z-10"
     >
       <div id="tabs" className="flex justify-between">
         {locations.map((loc, index) => (

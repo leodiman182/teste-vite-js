@@ -3,6 +3,7 @@ import { useContext, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useIsMount } from "../../hooks/useIsMount";
 import { AppContext } from "../../context/AppContext";
+import MainSection from "../../layout/MainSection";
 
 export default function Home() {
   const location = useLocation();
@@ -17,8 +18,8 @@ export default function Home() {
   }, [location.pathname]);
 
   return (
-    <section>
-      <h1 className="text-white">Home</h1>
-    </section>
+    <MainSection>
+      <p>Home</p>
+    </MainSection>
   );
 }

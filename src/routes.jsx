@@ -7,7 +7,7 @@ import BottomNav from "./layout/BottomNav";
 export default function Routing() {
   return (
     <BrowserRouter>
-      <main className="bg-dark-color w-full h-screen py-[10px] px-[24px] text-center font-mono">
+      <main className="bg-dark-color w-full h-screen pt-[40px] pb-[70px] px-[24px] text-center font-mono">
         <Router>
           <Route path="/" element={<Home />} />
           <Route path="/search" element={<Search />} />
