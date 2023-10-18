@@ -1,11 +1,8 @@
+// import BottomNav from "./layout/BottomNav";
 import Routing from "./routes";
 
 function App() {
-  return (
-    <main className="bg-dark-color w-full h-screen py-[10px] px-[24px] text-center">
-      <Routing />
-    </main>
-  );
+  return <Routing />;
 }
 
 export default App;

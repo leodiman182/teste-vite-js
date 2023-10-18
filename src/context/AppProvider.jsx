@@ -9,9 +9,13 @@ export default function AppProvider({ children }) {
     email: "leonardo.martins@cotefacil.com",
   });
 
+  const [path, setPath] = useState("");
+
   const context = {
     profile,
     setProfile,
+    path,
+    setPath,
   };
 
   return <AppContext.Provider value={context}>{children}</AppContext.Provider>;
