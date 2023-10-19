@@ -11,8 +11,6 @@ export default function Profile() {
   const { name, image, email } = profile;
   const isMount = useIsMount();
 
-  console.log(email);
-
   useEffect(() => {
     if (isMount) {
       const { pathname } = location;
@@ -21,13 +19,18 @@ export default function Profile() {
   }, [location.pathname]);
   return (
     <MainSection>
-      <article className="bg-primary-color-dark h-[275px] rounded py-[30px] px-[6px]">
-        <div className="flex flex-row items-center justify-center">
+      <h2 className="text-primary-color py-[10px] text-[24px]">Meu Perfil</h2>
+      <article className="bg-primary-color-dark h-[350px] rounded py-[30px] px-[30px]">
+        <div className="flex flex-col items-center justify-around h-full">
           <img
-            className="rounded-full w-[120px]"
+            className="rounded-full w-[120px] border-2 border-primary-color"
             src={image}
             alt={`${name} profile pic`}
           />
+          <div>
+            <p className="text-light-color font-bold text-[20px]">{name}</p>
+            <p className="text-[12px] text-primary-color">{email}</p>
+          </div>
         </div>
       </article>
     </MainSection>
