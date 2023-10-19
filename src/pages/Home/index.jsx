@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 import { useIsMount } from "../../hooks/useIsMount";
 import { AppContext } from "../../context/AppContext";
 import MainSection from "../../layout/MainSection";
+import HeroSection from "../../components/HeroSection";
 
 export default function Home() {
   const location = useLocation();
@@ -19,7 +20,7 @@ export default function Home() {
 
   return (
     <MainSection>
-      <p>Home</p>
+      <HeroSection />
     </MainSection>
   );
 }
