@@ -3,6 +3,7 @@ export default function SearchInput() {
     <div className="flex items-center max-w-md mx-auto bg-dark-color rounded border-primary-color-dark border-2">
       <div className="w-full">
         <input
+          data-testid="search-input"
           type="search"
           className="w-full px-4 py-1 text-light-color rounded-full focus:outline-none bg-dark-color"
           placeholder="Digite aqui..."
