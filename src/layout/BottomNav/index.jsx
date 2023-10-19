@@ -8,6 +8,7 @@ export default function BottomNav() {
 
   return (
     <section
+      data-testid="bottom-navigation"
       id="bottom-navigation"
       className="block fixed inset-x-0 bottom-0 z-10 bg-dark-color border-t-2 border-primary-color"
     >
