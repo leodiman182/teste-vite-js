@@ -1,5 +1,5 @@
 import { describe, test, expect } from "vitest";
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import SearchInput from ".";
 
 describe("The Search component", () => {
@@ -11,11 +11,12 @@ describe("The Search component", () => {
     expect(input).toBeInTheDocument();
   });
 
-  test("should have correct placeholder", () => {
+  test("should allow typing", () => {
     render(<SearchInput />);
 
     const input = screen.getByTestId("search-input");
 
-    expect(typeof input).toBe("object");
+    fireEvent.change(input, { target: { value: "Buscando" } });
+    expect(input.value).toBe("Buscando");
   });
 });
